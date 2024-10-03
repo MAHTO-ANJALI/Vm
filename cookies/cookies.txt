@@ -1,21 +1,25 @@
 # Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
 # This is a generated file! Do not edit.
 
-# domain        include_subdomains        path        secure        expiration_date        name        value
-.youtube.com        TRUE        /        TRUE        1762239415        __Secure-1PAPISID        Hvy_hym4o0KMJITh/A_GVpv44SGOwhJcCG
-.youtube.com        TRUE        /        TRUE        1762239415        __Secure-1PSID        g.a000oggmj0RhfIsFdvbRz7sFg9t0DGfw8lmiwUGZTmCycRU5sp7fMXwpXbFFK1ouMc978CS0bAACgYKATkSARYSFQHGX2MijabW-hEMJ1zFC6Eg1l7u6BoVAUF8yKpX9uz1UUVLAMREG0cCh2Bo0076
-.youtube.com        TRUE        /        TRUE        1759215443        __Secure-1PSIDCC        AKEyXzXcKgp1B5LxcdxQgSXeG2vli2v6x-sLv7WyCNHDVQwxhkxlxqzFb-wJd7uFuxiQpZYfWng
-.youtube.com        TRUE        /        TRUE        1759215410        __Secure-1PSIDTS        sidts-CjIBQlrA-Bi6iS1xZOQePRfupMpuzmJL74sB1I9xE-f0CzwrXa142Ii5dPoVO6LMFdQpWBAA
-.youtube.com        TRUE        /        TRUE        1762239415        __Secure-3PAPISID        Hvy_hym4o0KMJITh/A_GVpv44SGOwhJcCG
-.youtube.com        TRUE        /        TRUE        1762239415        __Secure-3PSID        g.a000oggmj0RhfIsFdvbRz7sFg9t0DGfw8lmiwUGZTmCycRU5sp7fMRkFSvweP2LGBY3lOOeYbAACgYKAS4SARYSFQHGX2Miqj7dbqB-RSiir_sPuEUDLRoVAUF8yKoHcd0Ex0MMMef-2FoetnnB0076
-.youtube.com        TRUE        /        TRUE        1759215443        __Secure-3PSIDCC        AKEyXzXLVgFl6-fCKIP1y5ky_xL0MQTY-LuG0b00pLVHJIPXM-CD_OTnk5L7m2kF0vLX9zX_1A
-.youtube.com        TRUE        /        TRUE        1759215410        __Secure-3PSIDTS        sidts-CjIBQlrA-Bi6iS1xZOQePRfupMpuzmJL74sB1I9xE-f0CzwrXa142Ii5dPoVO6LMFdQpWBAA
-.youtube.com        TRUE        /        FALSE        1762239415        APISID        PzanTGxl16Lg01RT/ALW--vj_Dd2hlQCw5
-.youtube.com        TRUE        /        TRUE        1762239415        HSID        AoBiCmS4hl2lLbmPK
-.youtube.com        TRUE        /        TRUE        1762239415        LOGIN_INFO        AFmmF2swRQIgQhk1k7TdBtS8RcuqX4LEmMhVSDpit3YDqFei7CMqD7gCIQD2lyexXmqCYg02ZB8LFzAtLHwezON4kzmH387cNqAfog:QUQ3MjNmeU93R2V5Y1J1b2UyS3BGSUhhVHNobUU3ZVJqLXpyQ2NHMnlCMXMzR1RucFRoN2U5bmpRM0VBa1hJdGI0VU9QMlNkS014b0FTREZYUEFndjV5ZVZMd3cxU1JGQ1h6VGxoV0NEWUJ2TDdDd0x6MEFsRFptdEVKOW84T1JPcnduUUZjWVJLMnB3Wm4zZnkxQy1vX29MVk5LTWRhdzB3
-.youtube.com        TRUE        /        TRUE        1762239416        PREF        tz=Asia.Calcutta&f5=30000&f7=100&f4=4000000&f6=40000000
-.youtube.com        TRUE        /        TRUE        1762239415        SAPISID        Hvy_hym4o0KMJITh/A_GVpv44SGOwhJcCG
-.youtube.com        TRUE        /        FALSE        1762239415        SID        g.a000oggmj0RhfIsFdvbRz7sFg9t0DGfw8lmiwUGZTmCycRU5sp7fBSin15uPQBzbuUXAzT5LJAACgYKAdUSARYSFQHGX2Miw0tsoa3R9JqxJIjRQptsmhoVAUF8yKqbdhNW3QGu93aoUsXWkrWR0076
-.youtube.com        TRUE        /        FALSE        1759215443        SIDCC        AKEyXzUg6RUF5CwzU7Z9DQlrmm0_7P8ewcxQk8SSMBJ2oJ5nyUB1cI_vTNd2rvRed5fdWKdPwA
-.youtube.com        TRUE        /        TRUE        1762239415        SSID        AvkUAvJf6jBPZiUsU
-.youtube.com        TRUE        /        TRUE        1727679535        YTSESSION-jnufdw        ANPz9Kiedx8PgxJ6E9wNXgCTLBYsjpFA4sNPGzVoBn8neJWSkY4MF92yCE5z9Qc7qV/3mzVlfCVKIj5Bjumk3ZkU+JpHLUTnpgRPwR0=
+.youtube.com	TRUE	/	TRUE	1727934253	GPS	1
+.youtube.com	TRUE	/	TRUE	1743484453	VISITOR_INFO1_LIVE	D-ucc_y5MxI
+.youtube.com	TRUE	/	TRUE	1743484453	VISITOR_PRIVACY_METADATA	CgJJThIEGgAgZQ%3D%3D
+.youtube.com	TRUE	/	TRUE	1759468848	__Secure-1PSIDTS	sidts-CjIBQlrA-EfubtVDjh2CRWjAkvs0nxKAfSnJSjk7O7-QDlh_Z0fOCn4D6psieviATKQS9RAA
+.youtube.com	TRUE	/	TRUE	1759468848	__Secure-3PSIDTS	sidts-CjIBQlrA-EfubtVDjh2CRWjAkvs0nxKAfSnJSjk7O7-QDlh_Z0fOCn4D6psieviATKQS9RAA
+.youtube.com	TRUE	/	TRUE	1791004853	LOGIN_INFO	AFmmF2swRgIhAIoUwfMWPEKldn324y0faQyTnLRVdDO-qWQbwQCkluFsAiEAq_GsvcPluUWX0bIF3hWL3z-BDPrNee1eITbcMGPJXlE:QUQ3MjNmd3FfX1lYVDhUb3h5YjVTcS1XYW8tVGFEcWtVX3FrRF9tQWQ3WTR1SzhjejdrRFMxRTlOMmxaTkNSeHc3QVBrVEdzVllDWEJxdTlBZ0FQTWxhSl9nY0ZYMmsxeUM5S25SSXFqeVZzSHgwQW1iV3c1ZHc3dl82QzZOTWFJMFJOQnZ4WVMxRXBxSVEzN180NDhodDhqVDJhUk1sWUpB
+.youtube.com	TRUE	/	TRUE	1727932973	YTSESSION-jnufdw	ANPz9KiQ+NhTyd6O+b6qKE+0DYw84G7XQHiEYwE3mbp98fYZy3q79l2f8dIv8aoXWwV4UgU5sQLdXBI0WOdCU5KdcgSshfKrHGv5ykM=
+.youtube.com	TRUE	/	TRUE	0	YSC	9LsbepqUYh4
+.youtube.com	TRUE	/	FALSE	1791004853	HSID	AMpyLGD96oKehtSZ7
+.youtube.com	TRUE	/	TRUE	1791004853	SSID	AgkASR9WGEosw9_cc
+.youtube.com	TRUE	/	FALSE	1791004853	APISID	dE4geIHezZ6ghaPX/A2U5Keh5epT7woOsN
+.youtube.com	TRUE	/	TRUE	1791004853	SAPISID	ItkZOF80nFelI8b9/AxTe3AbkzeqOOTEJS
+.youtube.com	TRUE	/	TRUE	1791004853	__Secure-1PAPISID	ItkZOF80nFelI8b9/AxTe3AbkzeqOOTEJS
+.youtube.com	TRUE	/	TRUE	1791004853	__Secure-3PAPISID	ItkZOF80nFelI8b9/AxTe3AbkzeqOOTEJS
+.youtube.com	TRUE	/	FALSE	1791004853	SID	g.a000ogiWxeAsUcM3LsAzM8fl8t9VKtzTUsZLqyD5SBliUoWlsb6RojOvEx2fKXXlGuoZN7fPyAACgYKAd4SARUSFQHGX2Mi11c4gImjtXSTuRsDjFmgghoVAUF8yKrT4NklTCxlFyY9NZC5DdoZ0076
+.youtube.com	TRUE	/	TRUE	1791004853	__Secure-1PSID	g.a000ogiWxeAsUcM3LsAzM8fl8t9VKtzTUsZLqyD5SBliUoWlsb6RXpLNMItQgKHvN3hl4quWeAACgYKAdQSARUSFQHGX2MiBxfcreulhqW69HCai88pXRoVAUF8yKpMvyl0j20ScnRehgqnpLgM0076
+.youtube.com	TRUE	/	TRUE	1791004853	__Secure-3PSID	g.a000ogiWxeAsUcM3LsAzM8fl8t9VKtzTUsZLqyD5SBliUoWlsb6RUSRxPoMf-4MafU2Ir0T9ngACgYKAU8SARUSFQHGX2MiQnmyMRyzn-rERBpYSGR33hoVAUF8yKq3mjg-LPigjnGTzFEj6hhz0076
+.youtube.com	TRUE	/	TRUE	1791004853	PREF	f6=40000000&tz=Asia.Kolkata
+.youtube.com	TRUE	/	FALSE	1759468879	SIDCC	AKEyXzWCU1sT5Kd1sT0XS7PkiHKTGrfwurlMS69NShvetkaK0iKxbwsMe11qbYY9WAuLv7rznA
+.youtube.com	TRUE	/	TRUE	1759468879	__Secure-1PSIDCC	AKEyXzXkEoA-2zGLxA2mg9sbvEN2XLtF9e1yfNRw94Xi7of79WhND755JZno4dCyHgyu_AeaNA
+.youtube.com	TRUE	/	TRUE	1759468879	__Secure-3PSIDCC	AKEyXzV9GRn3X4BxoOYuYxJqRqtGRmYMIJ0ROneVQ1xRGo1WYC5xL8S8UdFUK-S-dzCouPBr6Q
