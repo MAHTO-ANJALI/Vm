@@ -50,7 +50,6 @@ def PlayWrapper(command):
                     text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
                     disable_web_page_preview=True,
                 )
-                
 
         try:
             await message.delete()
@@ -68,15 +67,15 @@ def PlayWrapper(command):
             else None
         )
         url = await YouTube.url(message)
-if audio_telegram is None and video_telegram is None and url is None:
-    if len(message.command) < 2:
-        if "stream" in message.command:
-            return await message.reply_text(_["str_1"])
-        buttons = botplaylist_markup(_)
-        return await message.reply_text(
-            text=_["play_18"],
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
+        if audio_telegram is None and video_telegram is None and url is None:
+            if len(message.command) < 2:
+                if "stream" in message.command:
+                    return await message.reply_text(_["str_1"])
+                buttons = botplaylist_markup(_)
+                return await message.reply_text(
+                    text=_["play_18"],
+                    reply_markup=InlineKeyboardMarkup(buttons),
+                )
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
