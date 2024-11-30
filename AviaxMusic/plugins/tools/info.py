@@ -44,6 +44,35 @@ async def get_user_info(user, already=False):
     return [caption, None]
 
 
+async def get_chat_info(chat, already=False):
+    if not already:
+        chat = await app.get_chat(chat)
+    chat_id = chat.id
+    username = chat.username
+    title = chat.title
+    type_ = str(chat.type).split(".")[1]
+    is_scam = chat.is_scam
+    description = chat.description
+    members = chat.members_count
+    is_restricted = chat.is_restricted
+    link = f"[Link](t.me/{username})" if username else "Null"
+    dc_id = chat.dc_id
+    body = {
+        "● ᴄʜᴀᴛ ɪᴅ": chat_id,
+        "● ᴄʜᴀᴛ ᴅᴄ ɪᴅ": dc_id,
+        "● ᴛʏᴘᴇ": type_,
+        "● ɴᴀᴍᴇ": [title],
+        "● ᴜsᴇʀɴᴀᴍᴇ": [("@" + username) if username else "Null"],
+        "● ᴍᴇɴᴛɪᴏɴ": [link],
+        "● ᴍᴇᴍʙᴇʀs": members,
+        "● sᴄᴀᴍ": is_scam,
+        "● ʀᴇsᴛʀɪᴄᴛᴇᴅ": is_restricted,
+        "● ᴅᴇsᴄʀɪᴘᴛɪᴏɴ": [description],
+    }
+    caption = section("<u><b>ᴄʜᴀᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b></u>", body)
+    return [caption, None]
+
+
 @app.on_message(filters.command("info"))
 async def info_func(_, message: Message):
     if message.reply_to_message:
@@ -58,7 +87,7 @@ async def info_func(_, message: Message):
     try:
         info_caption, _ = await get_user_info(user)  # Ignore photo_id
     except Exception as e:
-        return await m.edit(f"{str(e)}, Perhaps you meant to use /chat_info?")
+        return await m.edit(f"{str(e)}, Perhaps you meant to use /groupinfo?")
 
     await m.edit(info_caption, disable_web_page_preview=True)  # Directly send the caption
 
@@ -70,21 +99,14 @@ async def chat_info_func(_, message: Message):
         chat = message.chat.id
         if chat == message.from_user.id:
             return await message.reply_text(
-                "**Usage:**/groupinfo [USERNAME|ID]"
+                "**Usage:** /groupinfo [USERNAME|ID]"
             )
     else:
         chat = splited[1]
     try:
-        m = await message.reply_text("Processing")
+        m = await message.reply_text("<b>ᴘʀᴏᴄᴇssɪɴɢ . . .</b>")
 
-        info_caption, photo_id = await get_chat_info(chat)
-        if not photo_id:
-            return await m.edit(info_caption, disable_web_page_preview=True)
-
-        photo = await app.download_media(photo_id)
-        await message.reply_photo(photo, caption=info_caption, quote=False)
-
-        await m.delete()
-        os.remove(photo)
+        info_caption, _ = await get_chat_info(chat)  # Ignore photo_id
+        await m.edit(info_caption, disable_web_page_preview=True)  # Directly send the caption
     except Exception as e:
-        await m.edit(e)
+        await m.edit(str(e))
