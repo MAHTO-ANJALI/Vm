@@ -666,3 +666,10 @@ async def remove_banned_user(user_id: int):
     if not is_gbanned:
         return
     return await blockeddb.delete_one({"user_id": user_id})
+
+
+async def is_gbanned_user(user_id: int) -> bool:
+    user = await gbansdb.find_one({"user_id": user_id})
+    if not user:
+        return False
+    return True
