@@ -5,6 +5,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from AviaxMusic.misc import SUDOERS
+from AviaxMusic import app
 from AviaxMusic.core.sections import section
 from AviaxMusic.utils.database import is_gbanned_user, user_global_karma
 
