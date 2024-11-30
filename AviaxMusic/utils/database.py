@@ -673,3 +673,11 @@ async def is_gbanned_user(user_id: int) -> bool:
     if not user:
         return False
     return True
+
+async def user_global_karma(user_id) -> int:
+    total_karma = 0
+    async for chat in karmadb.find({"chat_id": {"$lt": 0}}):
+        karma = chat["karma"].get(await int_to_alpha(user_id))
+        if karma and (int(karma["karma"]) > 0):
+            total_karma += int(karma["karma"])
+    return total_karma
