@@ -32,15 +32,15 @@ async def get_user_info(user, already=False):
     is_premium = user.is_premium
     karma = await user_global_karma(user_id)
     body = {
-        "ID": user_id,
-        "DC": dc_id,
-        "Name": [first_name],
-        "Username": [("@" + username) if username else "Null"],
-        "Mention": [mention],
-        "Sudo": is_sudo,
-        "Premium": is_premium,
-        "Karma": karma,
-        "Gbanned": is_gbanned,
+        "● ᴜsᴇʀ ɪᴅ" ➠  user_id,
+        "● ɴᴀᴍᴇ" ➠ [first_name],
+        "● ᴜsᴇʀɴᴀᴍᴇ" ➠ [("@" + username) if username else "Null"],
+        "● ᴍᴇɴᴛɪᴏɴ" ➠ [mention],
+        "● ᴜsᴇʀ ᴅᴄ ɪᴅ" ➠ dc_id,
+        "● ᴜsᴇʀ sᴜᴅᴏ" ➠ is_sudo,
+        "● ᴘʀᴇᴍɪᴜᴍ" ➠ is_premium,
+        "● ᴋᴀʀᴍᴀ" ➠ karma,
+        "● ɢʟᴏʙᴀʟ-ʙᴀɴ" ➠ is_gbanned,
     }
     caption = section("User info", body)
     return [caption, photo_id]
