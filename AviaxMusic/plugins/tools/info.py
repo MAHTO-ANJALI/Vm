@@ -55,7 +55,7 @@ async def get_chat_info(chat, already=False):
     description = chat.description
     members = chat.members_count
     is_restricted = chat.is_restricted
-    link = f"[Link](t.me/{username})" if username else "Null"
+    link = f"<a href='t.me/username'>link</a>" if username else "Null"
     dc_id = chat.dc_id
     body = {
         "● ᴄʜᴀᴛ ɪᴅ": chat_id,
