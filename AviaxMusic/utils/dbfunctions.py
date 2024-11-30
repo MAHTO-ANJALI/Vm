@@ -3,7 +3,7 @@ import pickle
 from string import ascii_lowercase
 from typing import Dict, List, Union
 
-from wbb import db
+
 
 
 notesdb = db.notes
