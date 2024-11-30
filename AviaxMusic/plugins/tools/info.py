@@ -40,7 +40,7 @@ async def get_user_info(user, already=False):
         "● ᴋᴀʀᴍᴀ": karma,
         "● ɢʟᴏʙᴀʟ-ʙᴀɴ": is_gbanned,
     }
-    caption = section("User info", body)
+    caption = section("<u><b>ᴜsᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b></u>", body)
     return [caption, None]
 
 
@@ -53,7 +53,7 @@ async def info_func(_, message: Message):
     elif not message.reply_to_message and len(message.command) != 1:
         user = message.text.split(None, 1)[1]
 
-    m = await message.reply_text("Processing")
+    m = await message.reply_text("<b>ᴘʀᴏᴄᴇssɪɴɢ . . .</b>")
 
     try:
         info_caption, _ = await get_user_info(user)  # Ignore photo_id
