@@ -6,7 +6,7 @@ from pyrogram.types import Message
 
 from AviaxMusic.misc import SUDOERS
 from AviaxMusic.core.sections import section
-from AviaxMusic.utils.dbfunctions import is_gbanned_user, user_global_karma
+from AviaxMusic.utils.database import is_gbanned_user, user_global_karma
 
 __MODULE__ = "Info"
 __HELP__ = """
