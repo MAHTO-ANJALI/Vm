@@ -1,10 +1,10 @@
 n = "\n"
 w = " "
 
-bold = lambda x: f"**{x}:** "
+bold = lambda x: f"<b>{x} ➠</b>"
 bold_ul = lambda x: f"**--{x}:**-- "
 
-mono = lambda x: f"`{x}`{n}"
+mono = lambda x: f"<code>{x}</code>{n}"
 
 
 def section(
