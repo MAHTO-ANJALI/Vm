@@ -1,4 +1,3 @@
-
 import os
 
 from pyrogram import filters
@@ -26,54 +25,23 @@ async def get_user_info(user, already=False):
     first_name = user.first_name
     mention = user.mention("Link")
     dc_id = user.dc_id
-    photo_id = user.photo.big_file_id if user.photo else None
     is_gbanned = await is_gbanned_user(user_id)
     is_sudo = user_id in SUDOERS
     is_premium = user.is_premium
     karma = await user_global_karma(user_id)
     body = {
-        "● ᴜsᴇʀ ɪᴅ ➠"  user_id,
-        "● ɴᴀᴍᴇ ➠" [first_name],
-        "● ᴜsᴇʀɴᴀᴍᴇ ➠" [("@" + username) if username else "Null"],
-        "● ᴍᴇɴᴛɪᴏɴ ➠" [mention],
-        "● ᴜsᴇʀ ᴅᴄ ɪᴅ ➠" dc_id,
-        "● ᴜsᴇʀ sᴜᴅᴏ ➠" is_sudo,
-        "● ᴘʀᴇᴍɪᴜᴍ ➠" is_premium,
-        "● ᴋᴀʀᴍᴀ ➠" karma,
-        "● ɢʟᴏʙᴀʟ-ʙᴀɴ ➠" is_gbanned,
+        "● ᴜsᴇʀ ɪᴅ": user_id,
+        "● ɴᴀᴍᴇ": [first_name],
+        "● ᴜsᴇʀɴᴀᴍᴇ": [("@" + username) if username else "Null"],
+        "● ᴍᴇɴᴛɪᴏɴ": [mention],
+        "● ᴜsᴇʀ ᴅᴄ ɪᴅ": dc_id,
+        "● ᴜsᴇʀ sᴜᴅᴏ": is_sudo,
+        "● ᴘʀᴇᴍɪᴜᴍ": is_premium,
+        "● ᴋᴀʀᴍᴀ": karma,
+        "● ɢʟᴏʙᴀʟ-ʙᴀɴ": is_gbanned,
     }
     caption = section("User info", body)
-    return [caption, photo_id]
-
-
-async def get_chat_info(chat, already=False):
-    if not already:
-        chat = await app.get_chat(chat)
-    chat_id = chat.id
-    username = chat.username
-    title = chat.title
-    type_ = str(chat.type).split(".")[1]
-    is_scam = chat.is_scam
-    description = chat.description
-    members = chat.members_count
-    is_restricted = chat.is_restricted
-    link = f"[Link](t.me/{username})" if username else "Null"
-    dc_id = chat.dc_id
-    photo_id = chat.photo.big_file_id if chat.photo else None
-    body = {
-        "ID": chat_id,
-        "DC": dc_id,
-        "Type": type_,
-        "Name": [title],
-        "Username": [("@" + username) if username else "Null"],
-        "Mention": [link],
-        "Members": members,
-        "Scam": is_scam,
-        "Restricted": is_restricted,
-        "Description": [description],
-    }
-    caption = section("Chat info", body)
-    return [caption, photo_id]
+    return [caption, None]
 
 
 @app.on_message(filters.command("info"))
@@ -88,17 +56,11 @@ async def info_func(_, message: Message):
     m = await message.reply_text("Processing")
 
     try:
-        info_caption, photo_id = await get_user_info(user)
+        info_caption, _ = await get_user_info(user)  # Ignore photo_id
     except Exception as e:
-        return await m.edit(f"{str(e)}, Perhaps you meant to use /chat_info ?")
+        return await m.edit(f"{str(e)}, Perhaps you meant to use /chat_info?")
 
-    if not photo_id:
-        return await m.edit(info_caption, disable_web_page_preview=True)
-    photo = await app.download_media(photo_id)
-
-    await message.reply_photo(photo, caption=info_caption, quote=False)
-    await m.delete()
-    os.remove(photo)
+    await m.edit(info_caption, disable_web_page_preview=True)  # Directly send the caption
 
 
 @app.on_message(filters.command("chat_info"))
