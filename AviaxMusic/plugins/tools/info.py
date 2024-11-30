@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import (InlineQuery, InlineQueryResultArticle,
                             InputTextMessageContent, Message)
 
-from AviaxMusic.misc import SUDOERS, AviaxMusic
+from AviaxMusic import SUDOERS, app
 from AviaxMusic.utils.db import (add_chat, add_user, chat_exists,
                           get_blacklist_event, get_nsfw_count,
                           get_reputation, get_user_trust,
