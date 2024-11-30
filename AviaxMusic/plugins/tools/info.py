@@ -63,14 +63,14 @@ async def info_func(_, message: Message):
     await m.edit(info_caption, disable_web_page_preview=True)  # Directly send the caption
 
 
-@app.on_message(filters.command("chat_info"))
+@app.on_message(filters.command("groupinfo"))
 async def chat_info_func(_, message: Message):
     splited = message.text.split()
     if len(splited) == 1:
         chat = message.chat.id
         if chat == message.from_user.id:
             return await message.reply_text(
-                "**Usage:**/chat_info [USERNAME|ID]"
+                "**Usage:**/groupinfo [USERNAME|ID]"
             )
     else:
         chat = splited[1]
