@@ -18,6 +18,7 @@ chatdb = mongodb.chat
 channeldb = mongodb.cplaymode
 countdb = mongodb.upcount
 gbansdb = mongodb.gban
+karmadb = mongodb.karma
 langdb = mongodb.language
 onoffdb = mongodb.onoffper
 playmodedb = mongodb.playmode
