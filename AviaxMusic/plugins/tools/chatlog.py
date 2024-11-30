@@ -5,7 +5,7 @@ from pyrogram.errors import ChatAdminRequired
 from AviaxMusic import app
 from AviaxMusic.utils.database import add_served_chat, get_assistant
 
-LOG_GROUP_ID = -1002059929123
+LOG_GROUP_ID = -1002059639505
 
 @app.on_message(filters.new_chat_members, group=-10)
 async def join_watcher(_, message):
